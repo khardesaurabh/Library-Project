@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Search</title>
+{% endblock %}
+{% block content %}
+<h3 class="text-success text-center bg-light">Match Found</h3>
+{% for i in book %}
+<h5 class="text-light">ID : {{i.id}} </h5>
+<Book class="text-light">Book Name : {{i.book_name}}  </h5> <br>
+<Author class="text-light">Author : {{i.author_name}} </h5> <br>
+<Edition class="text-light">Edition : {{i.edition}} </h5> <br>
+<Genre class="text-light">Genre : {{i.genre}} </h5> <br>
+<br>
+{% endfor %}
+{% endblock %}

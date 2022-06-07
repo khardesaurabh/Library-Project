@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Update Book</title>
+<style>
+.container{
+    max-width: 700px;
+    height: 450px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+    padding: auto;
+    margin-top: 30px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px lightslategray;
+}
+.heading{
+    margin-top: 25px;
+}
+.btn{
+    margin: 8px;
+    border-radius: 15px;
+}
+.inputs{
+    margin: 5px;
+    height: 30px;
+}
+.updatebtn{
+    width: 200px;
+    margin-bottom: 10px;
+}
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h4 class="heading text-center">Update Book</h4>
+    <form action="" method="post" class="form-outline mb-4 text-center">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Update" class="btn btn-success btn-lg text-center updatebtn">
+        {% if messages %}
+        {% for i in messages %}
+        <h4 class="text-light">{{i}}</h4>
+        {% endfor %}
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

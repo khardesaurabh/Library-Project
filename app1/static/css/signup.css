@@ -1,0 +1,29 @@
+.container{
+    max-width: 700px;
+    height: 510px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+    padding: auto;
+    margin-top: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px lightslategray;
+}
+.heading{
+    margin-top: 15px;
+}
+.icons{
+    font-size: 35px;
+    margin-right: 7px;
+}
+.inputs{
+    margin: 5px;
+    height: 38px;
+    width: 220px;
+}
+.regbtn{
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

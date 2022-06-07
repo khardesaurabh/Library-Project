@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>Login-Sign Up</title>
+    <style>
+        .container{
+            max-width: 700px;
+            height: 400px;
+            box-sizing: border-box;
+            background-color: white;
+            margin: auto;
+            padding: auto;
+            margin-top: 70px;
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px lightslategray;
+        }
+        .heading{
+            margin-top: 40px;
+        }
+        .icon{
+            font-size: 100px;
+            margin-left: 42%;
+        }
+        .btn{
+            margin: 8px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class=" heading text-center">Hello There!</h3>
+        <span class="icon text-center"><i class="bi bi-person-circle"></i></span>
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg d-block">Login</a>
+        <a href="{% url 'signup' %}" class="btn btn-success btn-lg d-block">SignUp</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.container{
+    max-width: 700px;
+    height: 450px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+    padding: auto;
+    margin-top: 70px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px lightslategray;
+}

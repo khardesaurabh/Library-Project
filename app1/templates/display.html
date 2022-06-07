@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Display</title>
+{% endblock %}
+{% block content %}
+<table class="table table-hover table-borderless bg-light mt-10">
+    <thead>
+        <th>ID</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Edition</th>
+        <th>Genre</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        {% for i in allbooks %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.book_name}}</td>
+            <td>{{i.author_name}}</td>
+            <td>{{i.edition}}</td>
+            <td>{{i.genre}}</td>
+            <td>
+                <a href="{% url 'updatebook' i.id %}" class="btn btn-warning"><span><i class="bi bi-pencil"></i></span></a>
+                <a href="{% url 'deletebook' i.id %}" class="btn btn-danger"><span><i class="bi bi-trash"></i></span></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% if messages %}
+    {% for i in messages %}
+        <h4 class="text-light">{{i}}</h4>
+    {% endfor %}
+{% endif %}
+{% endblock %}

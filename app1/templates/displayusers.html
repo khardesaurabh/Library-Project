@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Users</title>
+{% endblock %}
+{% block content %}
+<table class="table table-hover table-borderless table-striped bg-light mt-10">
+    <thead>
+        <th>ID</th>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Joining Date</th>
+    </thead>
+    <tbody>
+        {% for i in users %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.username}}</td>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.date_joined}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% if messages %}
+    {% for i in messages %}
+        <h4 class="text-light">{{i}}</h4>
+    {% endfor %}
+{% endif %}
+{% endblock %}

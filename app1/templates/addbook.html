@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Add Book</title>
+<style>
+.container{
+    max-width: 700px;
+    height: 450px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+    padding: auto;
+    margin-top: 30px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px lightslategray;
+}
+.heading{
+    margin-top: 25px;
+}
+.btn{
+    margin: 8px;
+    border-radius: 15px;
+}
+.inputs{
+    margin: 5px;
+    height: 30px;
+}
+.addbtn{
+    width: 200px;
+    margin-bottom: 10px;
+}
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h4 class="heading text-center">Add Book</h4>
+    <form action="" method="post" class="form-outline mb-4 text-center">
+        {% csrf_token %}
+        <input type="text" name="book_name" placeholder="Book Name" class="inputs"> <br>
+        <input type="text" name="author_name" placeholder="Author" class="inputs"> <br>
+        <input type="number" name="edition" placeholder="Edition" class="inputs"> <br>
+        <input type="text" name="genre" placeholder="Genre" class="inputs"> <br>
+        <input type="submit" value="Add" class="btn btn-success btn-lg text-center addbtn">
+        {% if messages %}
+        {% for i in messages %}
+        <h6 class="text-light">{{i}}</h6>
+        {% endfor %}
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
