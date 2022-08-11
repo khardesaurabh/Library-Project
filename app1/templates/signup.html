@@ -30,6 +30,7 @@
             <input type="password" name="password1" placeholder="Password" class="inputs"> <br>
             <span class="icons"><i class="bi bi-key-fill"></i></i></span>
             <input type="password" name="password2" placeholder="Confirm Password" class="inputs"> <br>
+            <p class="text-danger"><b>Password should contain atleast 8 characters. Password cannot be entirely numeric</b></p>
             <input type="submit" value="Register" class="btn btn-primary btn-lg text-center regbtn">
             {% if messages %}
             {% for i in messages %}
